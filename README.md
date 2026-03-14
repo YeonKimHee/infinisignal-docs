@@ -1,7 +1,3 @@
-<p align="center">
-  <img src="docs/screenshots/logo.png" alt="InfiniSignal" width="120" />
-</p>
-
 <h1 align="center">InfiniSignal</h1>
 
 <p align="center">
