@@ -12,7 +12,7 @@
   <a href="https://infinisignal.com">
     <img src="https://img.shields.io/badge/Live-infinisignal.com-0066ff?style=for-the-badge" alt="Live Site" />
   </a>
-  <img src="https://img.shields.io/badge/version-2.0.0-green?style=for-the-badge" alt="Version" />
+  <img src="https://img.shields.io/badge/version-1.2-green?style=for-the-badge" alt="Version" />
 </p>
 
 <p align="center">
