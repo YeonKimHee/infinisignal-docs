@@ -5,13 +5,10 @@
 <h1 align="center">InfiniSignal</h1>
 
 <p align="center">
-  한국 주식 무한매수법 백테스트 · 실시간 모니터링 · 텔레그램 알림 시스템
+  한국 주식 분할매수 전략 · 자동매매 · 실시간 모니터링 · 뉴스 분석 시스템
 </p>
 
 <p align="center">
-  <a href="https://infinisignal.com">
-    <img src="https://img.shields.io/badge/Live-infinisignal.com-0066ff?style=for-the-badge" alt="Live Site" />
-  </a>
   <img src="https://img.shields.io/badge/version-1.2-green?style=for-the-badge" alt="Version" />
 </p>
 
