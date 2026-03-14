@@ -47,7 +47,6 @@
 |:---:|:---:|
 | ![Backtest](docs/screenshots/backtest.png) | ![News](docs/screenshots/news.png) |
 
-> 스크린샷은 `docs/screenshots/` 폴더에 추가 후 경로를 업데이트하세요.
 
 ---
 
