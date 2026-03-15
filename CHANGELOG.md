@@ -4,10 +4,6 @@
 
 ---
 
-## [2.0.1] - 2026-03-15
-
----
-
 
 ## [2.0.0] - 2026-03-15
 
@@ -32,7 +28,7 @@
   - WAF: 한국 외 IP 차단 (Block non-KR)
   - Bot Fight Mode 활성화
   - AI 크롤러 차단
-- 네임서버 가비아 → Cloudflare로 이전 (anderson.ns / haley.ns)
+- 네임서버 Cloudflare로 이전
 
 ---
 
