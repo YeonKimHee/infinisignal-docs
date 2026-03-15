@@ -4,6 +4,27 @@
 
 ---
 
+## [2.0.0] - 2026-03-15
+
+### Added
+- **v2 KIS 계좌 연동 — 사용자별 자격증명 암호화 저장 + 실투자 지원**
+
+### Fixed
+- KIS 연결 테스트 1분 쿨다운 + 403 에러 메시지 개선
+- KIS 검증을 모의투자 서버로 변경 (실서버 403 문제)
+- KIS 검증을 토큰 발급으로 변경 (query_balance는 paper client 사용 문제)
+- KIS 자격증명 검증 시 토큰 캐시 사용 안 함
+- KIS 자격증명 검증 시 실서버(is_mock=False)로 연결
+- KIS 자격증명 저장 시 연결 검증 필수화
+- KIS 자격증명 마스킹 표시 제거 — 연동/미연동 상태만 표시
+- 개인 KIS 자격증명 없으면 매수/매도 주문 차단
+
+### Infrastructure
+- add KIS credentials migration + fix pydantic extra fields error
+
+---
+
+
 ## [1.4] - 2026-03-15
 
 ### Added
