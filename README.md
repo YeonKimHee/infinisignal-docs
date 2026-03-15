@@ -22,6 +22,7 @@
   <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" />
   <img src="https://img.shields.io/badge/NGINX-009639?style=flat-square&logo=nginx&logoColor=white" />
   <img src="https://img.shields.io/badge/Oracle_Cloud-F80000?style=flat-square&logo=oracle&logoColor=white" />
+  <img src="https://img.shields.io/badge/Cloudflare-F38020?style=flat-square&logo=cloudflare&logoColor=white" />
   <img src="https://img.shields.io/badge/Telegram_Bot-26A5E4?style=flat-square&logo=telegram&logoColor=white" />
   <img src="https://img.shields.io/badge/Gemini_AI-8E75B2?style=flat-square&logo=googlegemini&logoColor=white" />
 </p>
@@ -68,6 +69,12 @@
 - 연결 코드 방식으로 안전한 봇 연동
 - 쿨다운 기반 중복 알림 방지
 
+### KIS 계좌 연동
+- 사용자별 KIS API 자격증명 암호화 저장 (Fernet)
+- 모의투자/실투자 계좌 개별 관리
+- 자격증명 미등록 시 주문 차단 (조회/모니터링만 가능)
+- 연동 상태만 UI에 표시 (키 노출 방지)
+
 ### 포트폴리오 관리
 - 멀티 종목 포지션 추적
 - 룰 기반 리밸런싱 알림
@@ -78,10 +85,10 @@
 ## 아키텍처
 
 ```
-┌─────────────┐     HTTPS      ┌──────────┐      ┌─────────────┐
-│   Browser   │ ──────────────→│  NGINX   │─────→│  FastAPI     │
-│  (Vue 3)    │←── WebSocket ──│ (SSL)    │      │  (Uvicorn)  │
-└─────────────┘                └──────────┘      └──────┬──────┘
+┌─────────────┐     HTTPS      ┌────────────┐           ┌──────────┐      ┌─────────────┐
+│   Browser   │ ──────────────→│ Cloudflare │──────────→│  NGINX   │─────→│  FastAPI     │
+│  (Vue 3)    │←── WebSocket ──│ (WAF/CDN)  │           │ (SSL)    │      │  (Uvicorn)  │
+└─────────────┘                └────────────┘           └──────────┘      └──────┬──────┘
                                                         │
                               ┌─────────────────────────┼─────────────────────┐
                               │                         │                     │
@@ -175,6 +182,7 @@ AI가 자동으로 키워드, 감성, 중요도를 분석하여 표시합니다.
 | | gemini-embedding-001 | 뉴스 임베딩 생성 |
 | **인프라** | Docker Compose | 컨테이너 오케스트레이션 |
 | | NGINX + Let's Encrypt | 리버스 프록시 + SSL |
+| | Cloudflare | WAF + CDN + DDoS 방어 + IP 숨김 |
 | | Oracle Cloud | 호스팅 |
 | **알림** | Telegram Bot API | 유저별 DM 알림 |
 | **인증** | Google OAuth + JWT | 사용자 인증 |

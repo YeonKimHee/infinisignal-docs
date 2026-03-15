@@ -26,6 +26,13 @@
 
 ### Infrastructure
 - add KIS credentials migration + fix pydantic extra fields error
+- **Cloudflare 보안 인프라 도입**
+  - DNS Proxy (서버 실제 IP 숨김)
+  - SSL/TLS Full (Strict) 모드
+  - WAF: 한국 외 IP 차단 (Block non-KR)
+  - Bot Fight Mode 활성화
+  - AI 크롤러 차단
+- 네임서버 가비아 → Cloudflare로 이전 (anderson.ns / haley.ns)
 
 ---
 
